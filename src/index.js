@@ -1,9 +1,9 @@
 import './style.css';
 
-const code: HTMLElement = document.createElement('div');
+const code = document.createElement('div');
 document.body.appendChild(code);
 
-export const print = (value: any) =>  {
+export const print = (value) =>  {
   const output = JSON.stringify(value);
   console.log(output);
   code.innerHTML = output;
