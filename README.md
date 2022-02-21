@@ -1,1 +1,1 @@
-# ts-playground
+# js-playground
