@@ -39,5 +39,8 @@ module.exports = {
         exclude: /node_modules/,
       }
     ]
+  },
+  infrastructureLogging: {
+    level: 'error',
   }
 };
