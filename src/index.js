@@ -1,10 +1,5 @@
-import './style.css';
+import {print} from './config';
 
-const code = document.createElement('pre');
-document.body.appendChild(code);
+const hello_world = "Hello World!";
 
-export const print = (value) =>  {
-  const output = JSON.stringify(value, undefined, 2);
-  console.log(output);
-  code.innerHTML = output;
-};
+print(hello_world);
