@@ -1,10 +1,38 @@
-import './style.css';
+import {print} from './config';
+import {IUser} from "./interface/index";
 
-const code: HTMLElement = document.createElement('pre');
-document.body.appendChild(code);
+const hello_world = "Hello World!";
 
-export const print = (value: any) =>  {
-  const output = JSON.stringify(value, undefined, 2);
-  console.log(output);
-  code.innerHTML = output;
+print("ciao")
+console.log("ciao")
+
+interface IAdmin{
+  id: number;
+  hasTeams: boolean
+  address?: string
+}
+
+interface IGuest{
+  id: number;
+  hasLink: boolean
+}
+
+const user: IAdmin | IGuest = {
+  id: 2,
+  hasTeams: true
+};
+
+function seeInvoices (user: IAdmin | IGuest) {
+  if ("hasTeams" in user) {
+    // admin logic
+    user.address
+  } else {
+    // guest logic
+
+  }
+}
+
+// TypeGuard
+const isAdmin = (user: IAdmin | IGuest): user is IAdmin => {
+  return (user as IAdmin).hasTeams
 };

@@ -5,12 +5,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/app.ts',
+    app: './src/index.ts',
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: '/dist',
-    port: 8081,
+    contentBase: '/dist'
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -40,5 +39,5 @@ module.exports = {
         exclude: /node_modules/,
       }
     ]
-  },
+  }
 };
