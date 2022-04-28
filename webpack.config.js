@@ -9,7 +9,8 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: '/dist'
+    static: '/dist',
+    port: 8081,
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -40,7 +41,4 @@ module.exports = {
       }
     ]
   },
-  infrastructureLogging: {
-    level: 'error',
-  }
 };
